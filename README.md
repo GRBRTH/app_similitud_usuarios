@@ -47,10 +47,6 @@ app_similitud_usuarios/
 ├── README.md # Este archivo
 ├── requirements.txt # Dependencias del proyecto
 
-yaml
-Copiar
-Editar
-
 ---
 
 ## 📈 Proceso General
