@@ -2,18 +2,22 @@
 Aplicación web desarrollada con Streamlit que permite comparar perfiles de usuarios mediante la técnica de k vecinos más cercanos (k-NN), recomendando aquellos con mayor similitud en base a sus respuestas a un cuestionario. Ideal para análisis de afinidad, segmentación de usuarios o matchmaking personalizado.
 
 Problemática a abordar
+
 En la actualidad, muchas plataformas buscan recomendar contenido personalizado, ya sea en aplicaciones de entretenimiento, educación, comercio electrónico o redes sociales. Esta personalización depende de entender las preferencias de los usuarios y encontrar patrones de similitud entre ellos. La problemática que abordamos en este proyecto es precisamente cómo identificar, dentro de un conjunto de usuarios, aquellos que comparten gustos o patrones similares a un usuario dado, de forma automatizada y precisa. Esta capacidad puede ser la base para desarrollar sistemas de recomendación, agrupación o segmentación de audiencias, con gran aplicabilidad en diversos entornos digitales.
 
 Desarrollo
+
 Para enfrentar esta problemática, se utilizó un enfoque basado en ciencia de datos, particularmente en la técnica conocida como K-Nearest Neighbors (KNN) o método de los k vecinos más cercanos. Esta técnica permite encontrar los perfiles más similares a un usuario objetivo dentro de un conjunto, midiendo la distancia (en este caso, euclidiana) entre vectores que representan las respuestas o características de cada usuario. Este enfoque es ampliamente utilizado en clasificación, recomendación y detección de patrones, dada su simplicidad y efectividad.
 
 Herramientas y estructuras utilizadas
+
 El desarrollo del proyecto se realizó utilizando Python, por su amplia disponibilidad de bibliotecas de análisis de datos y su legibilidad. Se emplearon herramientas fundamentales como:
 •	Pandas: para estructurar, visualizar y manipular datos tabulares.
 •	Numpy: para realizar operaciones matemáticas y trabajar con vectores numéricos.
 •	Estructuras como diccionarios y listas para codificar respuestas, almacenar distancias y generar los rankings de similitud.
 
 Proceso general del análisis
+
 Creación del dataset: Se definió un conjunto de usuarios con sus respectivas respuestas a cuatro preguntas (preferencia de comida, deporte, libro y serie). Este conjunto fue almacenado en un diccionario y transformado en un DataFrame para facilitar la visualización y análisis.
 Codificación de respuestas: Dado que las respuestas eran categóricas (por ejemplo, "Cena", "Almuerzo"), se aplicó un proceso de codificación para convertir estas categorías en valores numéricos. Esto permitió trabajar con distancias matemáticas más adelante.
 Vectorización: Cada usuario fue representado como un vector numérico según sus respuestas codificadas. Esta vectorización es esencial para aplicar el algoritmo KNN.
@@ -21,6 +25,7 @@ Cálculo de distancias: Se definió un perfil de usuario (nuevo o existente) con
 Identificación de vecinos: Se ordenaron las distancias y se seleccionaron los k vecinos más cercanos (los más similares al perfil dado). Se mostraron los resultados junto con los valores de similitud y características de los vecinos seleccionados.
 
 Conclusión
+
 Este proyecto demuestra cómo los métodos de ciencia de datos pueden resolver problemas reales relacionados con personalización y análisis de similitudes entre usuarios. El uso del enfoque KNN permitió establecer una metodología clara, interpretable y escalable para identificar perfiles similares basándose en características categóricas.
 Además, el uso de Python y herramientas como pandas y numpy facilitó la implementación de un sistema completo de recomendación. Este tipo de enfoque puede escalar fácilmente a conjuntos de datos más grandes o ser adaptado a aplicaciones como motores de recomendación, segmentación de clientes o agrupación de intereses.
 En conclusión, esta solución muestra cómo un enfoque de ciencia de datos, combinado con programación eficiente, puede traducirse en herramientas prácticas que entregan valor a través del análisis de similitud y afinidad entre usuarios.
