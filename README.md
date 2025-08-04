@@ -32,7 +32,7 @@ Se utilizó el algoritmo **k-Nearest Neighbors (KNN)** para comparar perfiles en
 - **scikit-learn**: cálculo de distancias y análisis KNN
 - **Openpyxl**: lectura de archivos Excel
 
-> Las dependencias están listadas en el archivo [`requirements.txt`](./requirements.txt)
+> Las dependencias están listadas en el archivo requirements.txt
 
 ---
 
@@ -48,11 +48,13 @@ app_similitud_usuarios/
 
 ├── notebooks/ # Análisis exploratorio y desarrollo previo (Colab)
 
+├── Informe.md # Informe del proyecto
+
 ├── main.py # Archivo principal que ejecuta la app
 
-├── README.md # Este archivo
-
 ├── requirements.txt # Dependencias del proyecto
+
+├── README.md # Este archivo
 
 
 ---
