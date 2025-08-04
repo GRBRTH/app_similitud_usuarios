@@ -1,32 +1,91 @@
-# app_similitud_usuarios
-Aplicación web desarrollada con Streamlit que permite comparar perfiles de usuarios mediante la técnica de k vecinos más cercanos (k-NN), recomendando aquellos con mayor similitud en base a sus respuestas a un cuestionario. Ideal para análisis de afinidad, segmentación de usuarios o matchmaking personalizado.
+# 🧠 Aplicación de Similitud entre Usuarios
 
-Problemática a abordar
+Aplicación web desarrollada con **Streamlit** que recomienda perfiles similares utilizando la técnica de **k vecinos más cercanos (k-NN)**. Basada en las respuestas de un cuestionario, permite identificar usuarios afines, ideal para:
 
-En la actualidad, muchas plataformas buscan recomendar contenido personalizado, ya sea en aplicaciones de entretenimiento, educación, comercio electrónico o redes sociales. Esta personalización depende de entender las preferencias de los usuarios y encontrar patrones de similitud entre ellos. La problemática que abordamos en este proyecto es precisamente cómo identificar, dentro de un conjunto de usuarios, aquellos que comparten gustos o patrones similares a un usuario dado, de forma automatizada y precisa. Esta capacidad puede ser la base para desarrollar sistemas de recomendación, agrupación o segmentación de audiencias, con gran aplicabilidad en diversos entornos digitales.
+- Matchmaking personalizado
+- Análisis de afinidad
+- Segmentación de usuarios
 
-Desarrollo
+---
 
-Para enfrentar esta problemática, se utilizó un enfoque basado en ciencia de datos, particularmente en la técnica conocida como K-Nearest Neighbors (KNN) o método de los k vecinos más cercanos. Esta técnica permite encontrar los perfiles más similares a un usuario objetivo dentro de un conjunto, midiendo la distancia (en este caso, euclidiana) entre vectores que representan las respuestas o características de cada usuario. Este enfoque es ampliamente utilizado en clasificación, recomendación y detección de patrones, dada su simplicidad y efectividad.
+## 🧩 Problemática a Abordar
 
-Herramientas y estructuras utilizadas
+Hoy en día, muchas plataformas requieren ofrecer contenido personalizado. Ya sea para entretenimiento, e-commerce o redes sociales, es clave identificar patrones comunes entre usuarios.
 
-El desarrollo del proyecto se realizó utilizando Python, por su amplia disponibilidad de bibliotecas de análisis de datos y su legibilidad. Se emplearon herramientas fundamentales como:
-•	Pandas: para estructurar, visualizar y manipular datos tabulares.
-•	Numpy: para realizar operaciones matemáticas y trabajar con vectores numéricos.
-•	Estructuras como diccionarios y listas para codificar respuestas, almacenar distancias y generar los rankings de similitud.
+Este proyecto aborda cómo detectar usuarios con gustos o respuestas similares de manera automatizada, utilizando ciencia de datos.
 
-Proceso general del análisis
+---
 
-Creación del dataset: Se definió un conjunto de usuarios con sus respectivas respuestas a cuatro preguntas (preferencia de comida, deporte, libro y serie). Este conjunto fue almacenado en un diccionario y transformado en un DataFrame para facilitar la visualización y análisis.
-Codificación de respuestas: Dado que las respuestas eran categóricas (por ejemplo, "Cena", "Almuerzo"), se aplicó un proceso de codificación para convertir estas categorías en valores numéricos. Esto permitió trabajar con distancias matemáticas más adelante.
-Vectorización: Cada usuario fue representado como un vector numérico según sus respuestas codificadas. Esta vectorización es esencial para aplicar el algoritmo KNN.
-Cálculo de distancias: Se definió un perfil de usuario (nuevo o existente) con sus propias respuestas, el cual también fue codificado. Luego se calcularon las distancias euclidianas entre este perfil y todos los demás usuarios del dataset.
-Identificación de vecinos: Se ordenaron las distancias y se seleccionaron los k vecinos más cercanos (los más similares al perfil dado). Se mostraron los resultados junto con los valores de similitud y características de los vecinos seleccionados.
+## 🚀 Solución Propuesta
 
-Conclusión
+Se utilizó el algoritmo **k-Nearest Neighbors (KNN)** para comparar perfiles en base a sus respuestas vectorizadas. Las distancias euclidianas permiten determinar qué usuarios son más parecidos entre sí.
 
-Este proyecto demuestra cómo los métodos de ciencia de datos pueden resolver problemas reales relacionados con personalización y análisis de similitudes entre usuarios. El uso del enfoque KNN permitió establecer una metodología clara, interpretable y escalable para identificar perfiles similares basándose en características categóricas.
-Además, el uso de Python y herramientas como pandas y numpy facilitó la implementación de un sistema completo de recomendación. Este tipo de enfoque puede escalar fácilmente a conjuntos de datos más grandes o ser adaptado a aplicaciones como motores de recomendación, segmentación de clientes o agrupación de intereses.
-En conclusión, esta solución muestra cómo un enfoque de ciencia de datos, combinado con programación eficiente, puede traducirse en herramientas prácticas que entregan valor a través del análisis de similitud y afinidad entre usuarios.
+---
 
+## 🛠️ Herramientas y Librerías
+
+- **Python**: lenguaje principal
+- **Streamlit**: interfaz web interactiva
+- **Pandas**: manipulación de datos
+- **NumPy**: operaciones matemáticas
+- **Matplotlib**: visualización de resultados
+- **scikit-learn**: cálculo de distancias y análisis KNN
+- **Openpyxl**: lectura de archivos Excel
+
+> Las dependencias están listadas en el archivo [`requirements.txt`](./requirements.txt)
+
+---
+
+## 🗂️ Estructura del Proyecto
+
+app_similitud_usuarios/
+├── backend/ # Lógica del análisis y procesamiento
+├── data/ # Datos base (Excel, codificación, etc.)
+├── frontend/ # Visualización HTML (Streamlit)
+├── notebooks/ # Análisis exploratorio y desarrollo previo (Colab)
+├── main.py # Archivo principal que ejecuta la app
+├── README.md # Este archivo
+├── requirements.txt # Dependencias del proyecto
+
+yaml
+Copiar
+Editar
+
+---
+
+## 📈 Proceso General
+
+1. **Creación del dataset**: se define una tabla de usuarios con respuestas a 4 preguntas.
+2. **Codificación**: respuestas categóricas son convertidas a valores numéricos.
+3. **Vectorización**: cada perfil es representado como un vector.
+4. **Cálculo de distancias**: se mide la similitud con otros usuarios.
+5. **Recomendación**: se muestran los `k` perfiles más similares.
+
+---
+
+## 🧪 Cómo Ejecutar la App
+
+1. Clona el repositorio:
+bash
+git clone https://github.com/tu_usuario/app_similitud_usuarios.git
+cd app_similitud_usuarios
+
+Instala las dependencias:
+bash
+pip install -r requirements.txt
+
+Ejecuta la app:
+bash
+streamlit run main.py
+
+📓 Notebooks
+El análisis completo, pruebas, codificación y lógica KNN están en la carpeta /notebooks.
+
+Informe del proyecto
+El informe que detalla el contenido teórico del proyecto se encuentra en el archivo Informe.md
+
+🏁 Conclusión
+Este proyecto demuestra cómo aplicar técnicas de ciencia de datos para personalización basada en afinidad entre usuarios. Su diseño modular permite escalarlo fácilmente a nuevos contextos como:
+Motores de recomendación
+Segmentación de audiencias
+Matching en redes sociales o sitios de citas
