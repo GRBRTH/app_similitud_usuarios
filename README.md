@@ -39,13 +39,21 @@ Se utilizó el algoritmo **k-Nearest Neighbors (KNN)** para comparar perfiles en
 ## 🗂️ Estructura del Proyecto
 
 app_similitud_usuarios/
+
 ├── backend/ # Lógica del análisis y procesamiento
+
 ├── data/ # Datos base (Excel, codificación, etc.)
+
 ├── frontend/ # Visualización HTML (Streamlit)
+
 ├── notebooks/ # Análisis exploratorio y desarrollo previo (Colab)
+
 ├── main.py # Archivo principal que ejecuta la app
+
 ├── README.md # Este archivo
+
 ├── requirements.txt # Dependencias del proyecto
+
 
 ---
 
