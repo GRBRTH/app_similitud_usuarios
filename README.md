@@ -70,25 +70,35 @@ app_similitud_usuarios/
 ## 🧪 Cómo Ejecutar la App
 
 1. Clona el repositorio:
+   
 bash
+
 git clone https://github.com/tu_usuario/app_similitud_usuarios.git
+
 cd app_similitud_usuarios
 
 Instala las dependencias:
+
 bash
+
 pip install -r requirements.txt
 
 Ejecuta la app:
+
 bash
+
 streamlit run main.py
 
-📓 Notebooks
+📓 Notebooks:
+
 El análisis completo, pruebas, codificación y lógica KNN están en la carpeta /notebooks.
 
-Informe del proyecto
+Informe del proyecto:
+
 El informe que detalla el contenido teórico del proyecto se encuentra en el archivo Informe.md
 
-🏁 Conclusión
+🏁 Conclusión:
+
 Este proyecto demuestra cómo aplicar técnicas de ciencia de datos para personalización basada en afinidad entre usuarios. Su diseño modular permite escalarlo fácilmente a nuevos contextos como:
 Motores de recomendación
 Segmentación de audiencias
