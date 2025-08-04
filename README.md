@@ -70,18 +70,17 @@ app_similitud_usuarios/
 ## 🧪 Cómo Ejecutar la App
 
 1. Clona el repositorio:
-
 ---
 
 bash
 
-git clone https://github.com/tu_usuario/app_similitud_usuarios.git
+git clone https://github.com/GRBRTH/app_similitud_usuarios.git
 
 cd app_similitud_usuarios
 
 ---
 
-Instala las dependencias:
+2. Instala las dependencias:
 
 ---
 
@@ -91,7 +90,7 @@ pip install -r requirements.txt
 
 ---
 
-Ejecuta la app:
+3. Ejecuta la app:
 
 ---
 
