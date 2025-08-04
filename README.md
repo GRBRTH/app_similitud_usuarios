@@ -68,9 +68,9 @@ app_similitud_usuarios/
 ---
 
 ## 🧪 Cómo Ejecutar la App
---
+
 1. Clona el repositorio:
----
+
 bash
 
 git clone https://github.com/tu_usuario/app_similitud_usuarios.git
